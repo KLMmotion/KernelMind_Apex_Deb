@@ -1,8 +1,8 @@
 # KernelMind_Apex_Deb
 
-**KernelMind 机械系统与 Apex 遥操作平台 ARM64 Debian 包集合**
+**KernelMind 遥操系统与 Apex 遥操作平台 ARM64 Debian 包集合**
 
-> 本仓库收录了 KernelMind 机械臂驱动、舞肌灵巧手机器手控制及 VR 遥操作核心软件的 ARM64 Debian (.deb) 安装包，方便在机器人、教育、科研等场景中一键部署全部运行环境。
+> 本仓库收录了 KernelMind 舞肌灵巧手机器手控制及 VR 遥操作核心软件的 ARM64 Debian (.deb) 安装包，方便在机器人、教育、科研等场景中一键部署全部运行环境。
 
 [中文](#中文) | [English](#english)
 
@@ -76,7 +76,7 @@ sudo apt-get remove apex-teleop kernelmind-apex kernelmind-wujihand wujihandcpp
 | dpkg: dependency problems | 运行 `sudo apt-get install -f` |
 | 系统架构不兼容             | 用 `uname -m` 检查, 必须为 `aarch64`|
 | 安装包损坏                | 重新下载相应 .deb 文件         |
-| 权限错���                  | 装包命令加 `sudo`            |
+| 权限错误                  | 装包命令加 `sudo`            |
 
 ### 🔗 相关信息
 
