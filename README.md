@@ -20,7 +20,7 @@
 
 | 包名                  | 版本   | 架构 | 描述                     |
 |---------------------|-------|------|------------------------|
-| apex-teleop         | 0.1.0 | ARM64| VR遥操作系统主程序，实时视频流、远程遥控 |
+| apex-teleop         | 0.1.0 | ARM64| VR遥操作系统上位机主程序，实时视频流、远程遥控 |
 | kernelmind-apex     | 1.0.4 | ARM64| KernelMind Apex 遥操系统 |
 | kernelmind-wujihand | 1.0.3 | ARM64| 舞肌灵巧手驱动与控制库     |
 | wujihandcpp         | 1.5.1 | ARM64| 舞肌灵巧手 C++ 开发接口    |
