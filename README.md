@@ -12,9 +12,9 @@
 
 ### 📝 项目简介
 
-- 提供 KernelMind 机械臂 + 舞肌灵巧手的核心驱动和遥操作控制系统。
+- 提供 marvin pro机械臂 + 舞肌灵巧手的核心驱动和遥操作控制系统。
 - 支持 VR 头显人机交互、实时远程视频与二次开发。
-- 针对 ARM64 架构嵌入式 Linux 设备（如 NVIDIA Jetson、瑞芯微机器人控制终端）优化。
+- 针对 ARM64 NVIDIA Jetson开发。
 
 ### 📦 已含主要 Deb 包
 
@@ -30,26 +30,23 @@
 #### 系统环境要求
 
 - **架构**: ARM64 (aarch64)
-- **系统**: Ubuntu 18.04+/Debian 10+
+- **系统**: Ubuntu 22.04
 - **存储**: 至少 300MB
 
 #### 步骤
 
-1. 克隆仓库
-   ```bash
-   git clone https://github.com/KLMmotion/KernelMind_Apex_Deb.git
-   cd KernelMind_Apex_Deb
-   ```
+1. 从release页面下载最新deb包
 
-2. 按顺序安装 `.deb` 包（推荐）
+2. 安装遥操作主程序 `.deb` 包
    ```bash
-   sudo dpkg -i kernelmind-apex_1.0.4_arm64.deb
-   sudo dpkg -i wujihandcpp-1.5.1-arm64.deb
-   sudo dpkg -i kernelmind-wujihand_1.0.3_arm64.deb
-   sudo dpkg -i Apex-Teleop-0.1.0-arm64.deb
+   sudo dpkg -i kernelmind-apex_x.x.x_arm64.deb
    ```
-
-3. 自动修复依赖（如有）
+3. 如需安装 wuji 扩展包
+   ```bash
+      sudo dpkg -i wujihandcpp-1.5.1-arm64.deb
+      sudo dpkg -i kernelmind-wujihand_1.0.3_arm64.deb
+   ```
+4. 自动修复依赖（如有）
    ```bash
    sudo apt-get update
    sudo apt-get install -f
@@ -86,80 +83,3 @@ sudo apt-get remove apex-teleop kernelmind-apex kernelmind-wujihand wujihandcpp
 
 ---
 
-## English
-
-### 📝 Overview
-
-- Debian packages for KernelMind robotic systems and Apex VR teleoperation, targeting ARM64 Linux (NVIDIA Jetson, industrial robot controllers, etc).
-- Includes core drivers for robotic arms, dexterous hands, and VR-based remote operation.
-- Supports VR headset operation, real-time video streaming, and secondary development.
-
-### 📦 Included Packages
-
-| Package               | Version | Arch | Description                                            |
-|-----------------------|---------|------|--------------------------------------------------------|
-| apex-teleop           | 0.1.0   | ARM64| VR teleop system, real-time streaming & remote control |
-| kernelmind-apex       | 1.0.4   | ARM64| KernelMind Apex robot arm driver, runtime libraries    |
-| kernelmind-wujihand   | 1.0.3   | ARM64| Wujimuscle dexterous hand driver & control library     |
-| wujihandcpp           | 1.5.1   | ARM64| Wujimuscle C++ dev interface for dexterous hand        |
-
-### 🚀 Quick Start
-
-#### Requirements
-
-- **Arch**: ARM64 (aarch64)
-- **OS**: Ubuntu 18.04+/Debian 10+
-- **Storage**: ≥ 300MB
-
-#### Steps
-
-1. Clone repo
-   ```bash
-   git clone https://github.com/KLMmotion/KernelMind_Apex_Deb.git
-   cd KernelMind_Apex_Deb
-   ```
-2. Install packages in order (recommended)
-   ```bash
-   sudo dpkg -i kernelmind-apex_1.0.4_arm64.deb
-   sudo dpkg -i wujihandcpp-1.5.1-arm64.deb
-   sudo dpkg -i kernelmind-wujihand_1.0.3_arm64.deb
-   sudo dpkg -i Apex-Teleop-0.1.0-arm64.deb
-   ```
-3. Resolve dependencies (if needed)
-   ```bash
-   sudo apt-get update
-   sudo apt-get install -f
-   ```
-
-#### Uninstall
-
-```bash
-sudo apt-get remove apex-teleop kernelmind-apex kernelmind-wujihand wujihandcpp
-```
-
-### ⚙️ Features
-
-- 🎮 VR headset support for real-time teleoperation
-- 🦾 Full robot arm driver stack
-- 🖐️ Multi-finger dexterous hand control
-- 📹 Real-time video streaming feedback
-- 🧰 C++/Python developer interfaces
-
-### 🚦 Troubleshooting
-
-| Issue                       | Solution                            |
-|-----------------------------|-------------------------------------|
-| dpkg: dependency problems   | Run `sudo apt-get install -f`       |
-| Incompatible architecture   | Use `uname -m`; must be `aarch64`   |
-| Package file corrupted      | Re-download the corresponding .deb   |
-| Permission denied           | Prepend `sudo` to install commands  |
-
-### 🔗 Info
-
-- **Supported OS**: ARM64 Linux
-- **Languages**: C++/Python (distribution is binary releases; contact us for sources)
-- **Use Cases**: Robotics, VR teleoperation, Education, R&D
-
----
-
-> **如需详细功能描述、版本变更历史或SDK文档，请联系 KernelMind 官方团队！**
