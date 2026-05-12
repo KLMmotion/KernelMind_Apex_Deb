@@ -39,23 +39,23 @@
 
 2. 安装遥操作主程序 `.deb` 包
    ```bash
-   sudo dpkg -i kernelmind-apex_x.x.x_arm64.deb
+   sudo apt install ./kernelmind-apex_x.x.x_arm64.deb
    ```
 3. 如需安装 wuji 扩展包
    ```bash
-      sudo dpkg -i wujihandcpp-1.5.1-arm64.deb
-      sudo dpkg -i kernelmind-wujihand_1.0.3_arm64.deb
+      sudo apt install ./wujihandcpp-1.5.1-arm64.deb
+      sudo apt install ./kernelmind-wujihand_1.0.3_arm64.deb
    ```
 4. 自动修复依赖（如有）
    ```bash
-   sudo apt-get update
-   sudo apt-get install -f
+   sudo apt update
+   sudo apt install -f
    ```
 
 #### 卸载
 
 ```bash
-sudo apt-get remove apex-teleop kernelmind-apex kernelmind-wujihand wujihandcpp
+sudo apt remove apex-teleop kernelmind-apex kernelmind-wujihand wujihandcpp
 ```
 
 ### ⚙️ 功能亮点
@@ -70,7 +70,7 @@ sudo apt-get remove apex-teleop kernelmind-apex kernelmind-wujihand wujihandcpp
 
 | 问题                     | 解决方法                      |
 |------------------------|-----------------------------|
-| dpkg: dependency problems | 运行 `sudo apt-get install -f` |
+| dpkg: dependency problems | 运行 `sudo apt install -f` |
 | 系统架构不兼容             | 用 `uname -m` 检查, 必须为 `aarch64`|
 | 安装包损坏                | 重新下载相应 .deb 文件         |
 | 权限错误                  | 装包命令加 `sudo`            |
